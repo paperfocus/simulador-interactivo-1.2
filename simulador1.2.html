@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+    <!-- Incluir Bootstrap desde un CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- MENU SISTEMA-->
+<div id="cont-menu" class="menu"></div>
+    <div id="menu" class="sticky">
+        <ul>
+            <li><a href="#cont-Productos">Publicar</a></li>
+            <li><a href="#formularioBorrado">Eliminar</a></li>
+            <li><a href="#productos-sistema">Ver</a></li>
+            <li><a href="#cont-galeria">Galería</a></li>
+        </ul>
+    </div>
+</div>
+<!--  -->
+
+
+
+
+<!-- AGREGAR PRODUCTOS --> 
+
+<div id="cont-Productos" class="container text-left">
+    <form id="formulario">
+        <p id="texto-titulo" class="añadir">Añadir nuevo producto, precio y cantidad</p>
+        <span>Nombre del producto:</span>
+        <div class="input-group input-group-sm mb-3">
+            <input id="producto" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+        </div>
+        <div class="mb-3">
+            <label  class="form-label">Descripción corta del producto
+            </label>
+            <textarea class="form-control" id="descripcion-producto" rows="3"></textarea>
+        </div>
+        <div class="input-group input-group-sm mb-3">
+        <div class="mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-sm">Precio normal</span>
+            <input id="precio" type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+        </div>
+        <div class="mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-sm">Precio rebajado</span>
+            <input id="precio-rebajado" type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+        </div>
+        <div class="mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-sm">Cantidad</span>
+            <input id="cantidad" type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+        </div>
+        <div class="mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-sm">Categoría</span>
+            <input id="categoria" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+        </div>
+        </div>
+
+       <!-- <div class="input-group input-group-sm mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-sm">Imagen</span>
+            <input id="imagenURL" type="file" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+        </div> -->
+        <button type="submit" class="btn btn-primary">Publicar</button>
+
+        <div id="mensaje-alerta" class="container text-center">
+            <!--  Aqui se genera el mensaje de alerta -->
+        </div>
+    </form>
+</div>
+<!--  -->
+
+<!-- ELIMINAR PRODUCTOS -->
+
+<div id="cont-Productos" class="container text-left">
+    <form id="formularioBorrado">
+        <p id="texto-titulo">Eliminar productos por nombre y cantidad </p>
+        <div class="input-group input-group-sm mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-sm">Nombre</span>
+            <input id="productoB" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+        </div>
+        <div class="input-group input-group-sm mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-sm">Cantidad</span>
+            <input id="cantidadB" type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+        </div>
+        <button type="submit" class="btn btn-primary">Eliminar</button>
+        
+    </form>
+</div>
+<!--  -->
+
+<!-- VER PRODUCTOS EN EL SISTEMA -->      
+
+<div id="cont-Productos" class="container text-left">
+    <p id="texto-titulo">Ver productos agregados al sistema</p>
+
+    <div id="productos-sistema">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">id</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Precio</th>
+                    <th scope="col">Precio Oferta</th>
+                    <th scope="col">Cantidad</th>
+                    <th scope="col">Categorías</th>
+                </tr>
+            </thead>
+            <tbody id="listaProductos">
+                <!-- Aquí se mostrarán los productos -->
+            </tbody>
+        </table>
+    </div>
+</div>
+<!--  -->
+
+<!-- GALERIA PRODUCTOS EN EL SISTEMA -->      
+<div id="cont-galeria" class="container text-left">  
+    <div id="cardgaleria"class="card" style="width: 100rem;">
+        <div class="card-body">
+            <p id="texto-titulo">Galeria de productos</p><br>
+            <div id="galeria" class="card-container">
+                <!-- Aquí se mostrarán las cards de productos -->
+            </div>
+        </div>
+    </div>
+</div>
+<!--  -->
+ 
+    <script src="simulador1.2.js"></script>
+</body>
+</html>

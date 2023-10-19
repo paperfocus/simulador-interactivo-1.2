@@ -1,0 +1,159 @@
+body{
+
+    background-color: #ccd0d4 !important;
+
+}
+
+.sticky {
+    position: sticky;
+    top: 0; /* Define la posición en la que el menú se vuelve pegajoso, generalmente en la parte superior */
+    background-color: #fff; /* Color de fondo del menú pegajoso, ajusta según tus necesidades */
+    z-index: 100; /* Asegura que esté en la parte superior de otros elementos */
+    /* Otros estilos de tu menú, como ancho, altura, márgenes, etc. */
+}
+
+#menu {
+    background-color: #333;
+    padding: 10px;
+    text-align: center; /* Centra el contenido horizontalmente */
+}
+
+#menu ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Centra los elementos dentro del contenedor */
+}
+
+#menu ul li {
+    margin-right: 20px;
+}
+
+#menu a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#menu a:hover {
+    background-color: #555;
+}
+
+#mensaje-alerta{
+
+    color: red;
+
+}
+
+
+#cont-Productos{
+    padding: 1em;
+    border: .2px dotted rgba(0, 0, 0, 0.295) ;
+    background-color: white;
+}
+
+#productos-sistema2 {
+    overflow: auto; /* Añade barras de desplazamiento si el contenido desborda la tarjeta */
+    max-height: 1000px; /* Establece una altura máxima */
+    max-width: 1000px; /* Establece un ancho máximo igual al ancho de la tarjeta */
+  }
+
+
+.card-descripcion {
+    height: 60px; /* Altura máxima que se mostrará inicialmente */
+    overflow: hidden;
+    
+}
+
+
+
+.card {
+
+    position: fixed;
+    left: var(--side-cart-alignment-left,0);
+    right: var(--side-cart-alignment-right,0);
+    max-width: 100%;
+    padding: var(--cart-padding,30px 30px);
+    box-shadow: 0 0 20px rgba(0,0,0,.2);
+    border-style: var(--cart-border-style,none);
+    border-color: var(--cart-border-color,initial);
+    border-radius: var(--cart-border-radius,0);
+    margin-top: var(--mini-cart-spacing,0);
+    margin: .3em
+
+}
+
+
+#texto-titulo{
+
+    background-color: rgb(255, 255, 255);
+    padding: 1em;
+    border: .2px dotted rgba(0, 0, 0, 0.205) ;
+    border-radius: 5px;
+    background-color: rgb(243, 243, 243);
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+.card-title{
+
+    font-size: 18px;
+    
+}
+.card-precio{
+
+    font-size: 18px; 
+    font-weight: bold;
+
+}
+.card-precioRebajado{
+
+    color: red;
+    font-weight: bold;
+
+}
+
+.card-cantidad{
+
+    font-size: 16px; 
+    font-weight: bold;
+    
+
+}
+#galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Alineación a la izquierda */
+  }
+
+#cardGaleria{
+    width: calc(33.33% - 10px); /* Tres cards en una fila con margen entre ellas */
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+/* Cambia el orden de las cards para agregarlas de izquierda a derecha */
+.card:nth-child(even) {
+order: 1;
+}
+
+.card:nth-child(odd) {
+order: 2;
+}
+/* En este ejemplo, hemos establecido el orden de las cards para que las impares tengan un orden de 1 y las pares tengan un orden de 2. 
+Esto hará que las cards se muestren de izquierda a derecha en lugar de arriba y abajo. 
+Asegúrate de ajustar los márgenes y el ancho según tus necesidades específicas para lograr el aspecto deseado.
+ */  
+
+.sidebar {
+    width: 250px; /* Ancho del sidebar */
+    background-color: #f2f2f2; /* Color de fondo del sidebar */
+    padding: 10px; /* Espaciado interno */
+    /* Otras propiedades de estilo que desees */
+}
+
+/* Estilo para mostrar los elementos de la lista en una línea */
+#listaProductos2 li {
+    display: grid;
+    margin-right: 90px; /* Ajusta este valor según tus necesidades para agregar espacio entre los elementos */
+}
