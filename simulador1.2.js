@@ -46,7 +46,7 @@ function agregarProductosSistema(variable) {//le puse nombre variable a la varia
     variable.preventDefault()
     let formulario = variable.target
 
-    let nombre = formulario.querySelector("#producto").value.trim().toUpperCase() // Trim para eliminar espacios en blanco, lo deje en blanco para ocuparlo mas adelante
+    let nombre = formulario.querySelector("#producto").value.trim().toUpperCase() // Trim funciona para los decimales, lo deje en blanco lo ocuparé mas adelante
     let descripcion = formulario.querySelector("#descripcion-producto").value
     let precio = parseFloat(formulario.querySelector("#precio").value)
     let precioRebajado = parseFloat(formulario.querySelector("#precio-rebajado").value)
